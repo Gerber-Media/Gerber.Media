@@ -4,7 +4,7 @@
   'use strict';
 
   // --- Navbar scroll effect ---
-  const nav = document.querySelector('.nav');
+  var nav = document.querySelector('.nav');
 
   function updateNav() {
     nav.classList.toggle('scrolled', window.scrollY > 60);
@@ -14,8 +14,8 @@
   updateNav();
 
   // --- Mobile menu toggle ---
-  const toggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  var toggle = document.querySelector('.nav-toggle');
+  var navLinks = document.querySelector('.nav-links');
 
   if (toggle) {
     toggle.addEventListener('click', function () {
@@ -23,14 +23,87 @@
       navLinks.classList.toggle('open');
     });
 
-    // Close menu on link click
-    navLinks.querySelectorAll('a').forEach(function (link) {
+    navLinks.querySelectorAll('a[href^="#"]').forEach(function (link) {
       link.addEventListener('click', function () {
         toggle.classList.remove('active');
         navLinks.classList.remove('open');
       });
     });
   }
+
+  // --- Language dropdown ---
+  var langDropdown = document.querySelector('.lang-dropdown');
+  var langButton = document.querySelector('.lang-switch');
+
+  if (langDropdown && langButton) {
+    langButton.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = langDropdown.classList.toggle('open');
+      langButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', function () {
+      langDropdown.classList.remove('open');
+      langButton.setAttribute('aria-expanded', 'false');
+    });
+
+    langDropdown.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && langDropdown.classList.contains('open')) {
+        langDropdown.classList.remove('open');
+        langButton.setAttribute('aria-expanded', 'false');
+        langButton.focus();
+      }
+    });
+  }
+
+  // --- Legal modals ---
+  document.querySelectorAll('[data-modal]').forEach(function (trigger) {
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      var modalId = this.getAttribute('data-modal');
+      var overlay = document.getElementById(modalId);
+      if (overlay) {
+        overlay.classList.add('active');
+        document.body.classList.add('modal-open');
+        var closeBtn = overlay.querySelector('.modal-close');
+        if (closeBtn) closeBtn.focus();
+      }
+    });
+  });
+
+  document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
+    // Close on overlay click (not modal content)
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) {
+        overlay.classList.remove('active');
+        document.body.classList.remove('modal-open');
+      }
+    });
+
+    // Close button
+    var closeBtn = overlay.querySelector('.modal-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        overlay.classList.remove('active');
+        document.body.classList.remove('modal-open');
+      });
+    }
+  });
+
+  // Close modal on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      var activeModal = document.querySelector('.modal-overlay.active');
+      if (activeModal) {
+        activeModal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+      }
+    }
+  });
 
   // --- Scroll animations (IntersectionObserver) ---
   var animatedElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
@@ -52,13 +125,12 @@
       observer.observe(el);
     });
   } else {
-    // Fallback: show all immediately
     animatedElements.forEach(function (el) {
       el.classList.add('visible');
     });
   }
 
-  // --- Smooth scroll for anchor links (fallback for older browsers) ---
+  // --- Smooth scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       var target = document.querySelector(this.getAttribute('href'));
@@ -81,7 +153,7 @@
       var link = document.querySelector('.nav-links a[href="#' + id + '"]');
       if (link) {
         if (scrollPos >= top && scrollPos < top + height) {
-          link.style.color = 'var(--text-primary)';
+          link.style.color = 'var(--text)';
         } else {
           link.style.color = '';
         }

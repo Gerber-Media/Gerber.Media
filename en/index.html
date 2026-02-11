@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerber.Media &#8212; Creative Agency for Web, Design &amp; Media</title>
   <meta name="description" content="Gerber.Media &#8212; Creative agency for web development, design, media production and consulting.">
-  <link rel="alternate" hreflang="de" href="../">
-  <link rel="alternate" hreflang="en" href="./">
-  <link rel="alternate" hreflang="da" href="../da/">
+  <link rel="alternate" hreflang="de" href="../index.html">
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="da" href="../da/index.html">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
   <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="container">
-      <a href="#hero" class="nav-logo">Gerber.Media</a>
+      <a href="#hero" class="nav-logo">Gerber<span class="dot">.</span>Media</a>
       <ul class="nav-links">
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#services">Services</a></li>
@@ -26,9 +26,9 @@
             EN <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <ul class="lang-menu" role="menu">
-            <li role="none"><a role="menuitem" href="../" hreflang="de" lang="de">Deutsch</a></li>
-            <li role="none"><a role="menuitem" href="./" hreflang="en" lang="en" aria-current="page">English</a></li>
-            <li role="none"><a role="menuitem" href="../da/" hreflang="da" lang="da">Dansk</a></li>
+            <li role="none"><a role="menuitem" href="../index.html" hreflang="de" lang="de">Deutsch</a></li>
+            <li role="none"><a role="menuitem" href="index.html" hreflang="en" lang="en" aria-current="page">English</a></li>
+            <li role="none"><a role="menuitem" href="../da/index.html" hreflang="da" lang="da">Dansk</a></li>
           </ul>
         </li>
       </ul>
@@ -43,8 +43,9 @@
   <!-- Hero -->
   <section id="hero" class="hero">
     <div class="hero-content">
-      <h1 class="hero-title">We are <span class="highlight">Gerber.Media</span></h1>
-      <p class="hero-subtitle">Creative agency for digital experiences &#8212; web development, design and media production, all in one place.</p>
+      <span class="hero-eyebrow">Creative Agency</span>
+      <h1 class="hero-title">We are <em>Gerber.Media</em></h1>
+      <p class="hero-subtitle">Digital experiences that inspire &#8212; web development, design and media production, all in one place.</p>
       <div class="hero-buttons">
         <a href="#portfolio" class="btn btn-primary">Our Projects</a>
         <a href="#contact" class="btn btn-outline">Get in Touch</a>
@@ -56,7 +57,7 @@
   <section id="portfolio" class="portfolio">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">Portfolio</span>
+        <span class="section-eyebrow">Portfolio</span>
         <h2 class="section-title">Selected Projects</h2>
         <p class="section-subtitle">A selection of our recent work across web, design and media.</p>
       </div>
@@ -105,7 +106,7 @@
   <section id="services" class="services">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">Services</span>
+        <span class="section-eyebrow">Services</span>
         <h2 class="section-title">What We Offer</h2>
         <p class="section-subtitle">From concept to execution &#8212; everything under one roof.</p>
       </div>
@@ -138,7 +139,7 @@
   <section id="about" class="about">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">About</span>
+        <span class="section-eyebrow">About</span>
         <h2 class="section-title">Creativity meets Technology</h2>
       </div>
       <div class="about-content">
@@ -147,7 +148,7 @@
           <h3>Who We Are</h3>
           <p>Gerber.Media is a creative agency with a passion for digital experiences. We combine design thinking with technical excellence to bring brands to life.</p>
           <p>With a broad spectrum of skills &#8212; from web development to graphic design to media production &#8212; we deliver tailored solutions for every challenge.</p>
-          <a href="#contact" class="btn btn-primary">Work With Us</a>
+          <a href="#contact" class="btn btn-accent">Work With Us</a>
         </div>
       </div>
     </div>
@@ -157,7 +158,7 @@
   <section id="contact" class="contact">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">Contact</span>
+        <span class="section-eyebrow">Contact</span>
         <h2 class="section-title">Let&#8217;s Talk</h2>
         <p class="section-subtitle">Have a project in mind? We&#8217;d love to hear from you.</p>
       </div>
@@ -166,6 +167,10 @@
           <h3>Get in Touch</h3>
           <p>Reach out directly or use the contact form. We&#8217;ll get back to you promptly.</p>
           <div class="contact-details">
+            <a href="tel:+4915566350001">
+              <span class="icon">&#128222;</span>
+              +49 155 6635 0001
+            </a>
             <a href="mailto:hello@gerber.media">
               <span class="icon">&#9993;&#65039;</span>
               hello@gerber.media
@@ -177,11 +182,35 @@
           </div>
         </div>
         <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
-          <input type="email" name="email" placeholder="Your Email" required autocomplete="email">
-          <textarea name="message" placeholder="Your Message" required></textarea>
+          <label for="name-en">Name</label>
+          <input type="text" id="name-en" name="name" placeholder="Your Name" required autocomplete="name">
+          <label for="email-en">Email</label>
+          <input type="email" id="email-en" name="email" placeholder="Your Email" required autocomplete="email">
+          <label for="message-en">Message</label>
+          <textarea id="message-en" name="message" placeholder="Your Message" required></textarea>
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Podcast Highlight -->
+  <section class="podcast">
+    <div class="podcast-inner">
+      <div class="podcast-visual fade-in-left">
+        <div class="podcast-cover">&#127911;</div>
+        <div class="podcast-eq">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="podcast-content fade-in-right">
+        <span class="podcast-eyebrow">Podcast Production</span>
+        <h2 class="podcast-title">We put your <em>story on air</em></h2>
+        <p class="podcast-text">From concept to recording, editing and final feed &#8212; we produce podcasts that get heard. Professional equipment, creative formats and technical distribution included.</p>
+        <div class="podcast-buttons">
+          <a href="#contact" class="btn btn-podcast">Request a Podcast</a>
+          <a href="#portfolio" class="btn btn-podcast-outline">Listen to References</a>
+        </div>
       </div>
     </div>
   </section>
@@ -192,12 +221,87 @@
       <div class="footer-content">
         <p>&#169; 2026 Gerber.Media &#8212; All rights reserved.</p>
         <div class="footer-links">
-          <a href="#">Imprint</a>
-          <a href="#">Privacy</a>
+          <a href="#" data-modal="modal-imprint">Imprint</a>
+          <a href="#" data-modal="modal-privacy">Privacy</a>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Modal: Imprint -->
+  <div class="modal-overlay" id="modal-imprint" role="dialog" aria-modal="true" aria-labelledby="modal-imprint-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-imprint-title">Imprint</h2>
+        <button class="modal-close" aria-label="Close">&#10005;</button>
+      </div>
+      <div class="modal-body">
+        <h3>Information pursuant to EU E-Commerce Directive (2000/31/EC)</h3>
+        <p>Gerber.Media<br>Owner: Dirk Gerber<br>Nedervej 12<br>6470 Lysabild<br>Denmark</p>
+
+        <h3>Contact</h3>
+        <p>Phone: <a href="tel:+4915566350001">+49 155 6635 0001</a><br>Email: <a href="mailto:hello@gerber.media">hello@gerber.media</a></p>
+
+        <h3>Responsible for content</h3>
+        <p>Dirk Gerber<br>Nedervej 12<br>6470 Lysabild</p>
+
+        <h3>EU Dispute Resolution</h3>
+        <p>The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>. Our email address can be found above in the imprint.</p>
+
+        <h3>Consumer Dispute Resolution</h3>
+        <p>We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+
+        <h3>Liability for Content</h3>
+        <p>As a service provider, we are responsible for our own content on these pages in accordance with general legislation. Pursuant to the EU E-Commerce Directive (Art. 12&#8211;15), however, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.</p>
+
+        <h3>Liability for Links</h3>
+        <p>Our website contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for such external content. The respective provider or operator of the linked pages is always responsible for their content.</p>
+
+        <h3>Copyright</h3>
+        <p>The content and works created by the site operators on these pages are subject to Danish and European copyright law (Ophavsretsloven). Reproduction, editing, distribution, and any kind of use beyond the limits of copyright law require the written consent of the respective author or creator.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Privacy Policy -->
+  <div class="modal-overlay" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="modal-privacy-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-privacy-title">Privacy Policy</h2>
+        <button class="modal-close" aria-label="Close">&#10005;</button>
+      </div>
+      <div class="modal-body">
+        <h3>1. Privacy at a Glance</h3>
+        <p>The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to personally identify you.</p>
+
+        <h3>2. Data Controller</h3>
+        <p>The party responsible for data processing on this website is:<br>Gerber.Media<br>Dirk Gerber<br>Nedervej 12, 6470 Lysabild<br>Email: <a href="mailto:hello@gerber.media">hello@gerber.media</a></p>
+
+        <h3>3. Data Collection on This Website</h3>
+        <p>This website is hosted as a static site on GitHub Pages. When you visit, the hosting provider automatically stores information in server log files that your browser transmits automatically. These include:</p>
+        <ul>
+          <li>Browser type and version</li>
+          <li>Operating system used</li>
+          <li>Referrer URL</li>
+          <li>Time of server request</li>
+          <li>IP address (anonymised)</li>
+        </ul>
+        <p>This data is not merged with other data sources.</p>
+
+        <h3>4. Contact Form</h3>
+        <p>If you send us enquiries via the contact form, your details from the form, including the contact data you provide, will be stored by us for the purpose of processing the enquiry. Processing is based on Art. 6 (1) lit. b GDPR. Your data will be deleted after the enquiry has been dealt with, unless statutory retention obligations apply.</p>
+
+        <h3>5. Your Rights</h3>
+        <p>You have the right at any time to free information about your stored personal data, its origin and recipients, and the purpose of data processing, as well as a right to rectification, blocking, or deletion of this data. You may contact us at the address given in the imprint at any time regarding this and other questions on the subject of personal data.</p>
+
+        <h3>6. Cookies</h3>
+        <p>This website does not use cookies.</p>
+
+        <h3>7. Analytics and Advertising</h3>
+        <p>This website does not use any analytics tools or advertising trackers.</p>
+      </div>
+    </div>
+  </div>
 
   <script src="../js/main.js"></script>
 </body>
