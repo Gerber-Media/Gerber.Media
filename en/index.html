@@ -21,6 +21,12 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9679;</button>
+        </li>
+        <li>
+          <button class="sound-toggle" aria-label="Sound on/off" title="Sound on/off">&#9835;</button>
+        </li>
         <li class="lang-dropdown">
           <button class="lang-switch" aria-expanded="false" aria-haspopup="true" aria-label="Select language">
             EN <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -42,6 +48,7 @@
 
   <!-- Hero -->
   <section id="hero" class="hero">
+    <canvas id="hero-waves"></canvas>
     <div class="hero-content">
       <span class="hero-eyebrow">Creative Agency</span>
       <h1 class="hero-title">We are <em>Gerber.Media</em></h1>
