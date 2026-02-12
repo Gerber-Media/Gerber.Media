@@ -458,4 +458,97 @@
       soundToggle.classList.toggle('muted', soundMuted);
     });
   }
+
+  // --- Font Switcher for Hero Headline ---
+  var fontSwitcher = document.querySelector('.font-switcher');
+  if (fontSwitcher) {
+    var heroTitle = document.querySelector('.hero-title');
+    var fontButtons = fontSwitcher.querySelectorAll('button[data-font]');
+
+    // Restore saved font
+    var savedFont = localStorage.getItem('heroFont');
+    if (savedFont && heroTitle) {
+      heroTitle.style.fontFamily = "'" + savedFont + "', sans-serif";
+      fontButtons.forEach(function (btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-font') === savedFont);
+      });
+    }
+
+    fontButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var font = this.getAttribute('data-font');
+        if (heroTitle) {
+          heroTitle.style.fontFamily = "'" + font + "', sans-serif";
+        }
+        fontButtons.forEach(function (b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        localStorage.setItem('heroFont', font);
+      });
+    });
+  }
+
+  // --- Equalizer Magnifying Lens ---
+  var eqLens = document.getElementById('eq-lens');
+  var eqLensCanvas = document.getElementById('eq-lens-canvas');
+  var heroEl = document.querySelector('.hero');
+
+  if (eqLens && eqLensCanvas && waveCanvas && heroEl) {
+    var lensSize = 180;
+    var lensZoom = 3;
+    eqLensCanvas.width = lensSize;
+    eqLensCanvas.height = lensSize;
+    var lensCtx = eqLensCanvas.getContext('2d');
+
+    function updateLens(mx, my) {
+      // Position lens centered on mouse
+      eqLens.style.left = mx - lensSize / 2 + 'px';
+      eqLens.style.top = my - lensSize / 2 + 'px';
+
+      // Draw zoomed portion of the main equalizer canvas
+      var sx = mx - lensSize / (2 * lensZoom);
+      var sy = my - lensSize / (2 * lensZoom);
+      var sw = lensSize / lensZoom;
+      var sh = lensSize / lensZoom;
+
+      lensCtx.clearRect(0, 0, lensSize, lensSize);
+      lensCtx.save();
+      // Clip to circle
+      lensCtx.beginPath();
+      lensCtx.arc(lensSize / 2, lensSize / 2, lensSize / 2, 0, Math.PI * 2);
+      lensCtx.clip();
+      lensCtx.drawImage(waveCanvas, sx, sy, sw, sh, 0, 0, lensSize, lensSize);
+      lensCtx.restore();
+    }
+
+    heroEl.addEventListener('mousemove', function (e) {
+      var rect = heroEl.getBoundingClientRect();
+      var mx = e.clientX - rect.left;
+      var my = e.clientY - rect.top;
+      updateLens(mx, my);
+    });
+
+    // Continuously redraw lens to keep up with animation
+    function lensLoop() {
+      var lens = eqLens;
+      if (lens && lens.style.left) {
+        var lx = parseFloat(lens.style.left) + lensSize / 2;
+        var ly = parseFloat(lens.style.top) + lensSize / 2;
+        if (!isNaN(lx) && !isNaN(ly)) {
+          var sx = lx - lensSize / (2 * lensZoom);
+          var sy = ly - lensSize / (2 * lensZoom);
+          var sw = lensSize / lensZoom;
+          var sh = lensSize / lensZoom;
+          lensCtx.clearRect(0, 0, lensSize, lensSize);
+          lensCtx.save();
+          lensCtx.beginPath();
+          lensCtx.arc(lensSize / 2, lensSize / 2, lensSize / 2, 0, Math.PI * 2);
+          lensCtx.clip();
+          lensCtx.drawImage(waveCanvas, sx, sy, sw, sh, 0, 0, lensSize, lensSize);
+          lensCtx.restore();
+        }
+      }
+      requestAnimationFrame(lensLoop);
+    }
+    lensLoop();
+  }
 })();
