@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    rect { fill: #e11d48; rx: 1.5; }
+    @keyframes eq1 { 0%,100% { height:8; y:16; } 50% { height:22; y:5; } }
+    @keyframes eq2 { 0%,100% { height:14; y:12; } 50% { height:26; y:3; } }
+    @keyframes eq3 { 0%,100% { height:20; y:8; } 50% { height:10; y:14; } }
+    @keyframes eq4 { 0%,100% { height:12; y:14; } 50% { height:24; y:4; } }
+    @keyframes eq5 { 0%,100% { height:16; y:10; } 50% { height:6; y:18; } }
+    .b1 { animation: eq1 1.2s ease-in-out infinite; }
+    .b2 { animation: eq2 0.9s ease-in-out infinite; }
+    .b3 { animation: eq3 1.1s ease-in-out infinite; }
+    .b4 { animation: eq4 0.8s ease-in-out infinite; }
+    .b5 { animation: eq5 1.3s ease-in-out infinite; }
+  </style>
+  <rect class="b1" x="2" y="16" width="4" height="8" rx="1.5"/>
+  <rect class="b2" x="8" y="12" width="4" height="14" rx="1.5"/>
+  <rect class="b3" x="14" y="8" width="4" height="20" rx="1.5"/>
+  <rect class="b4" x="20" y="14" width="4" height="12" rx="1.5"/>
+  <rect class="b5" x="26" y="10" width="4" height="16" rx="1.5"/>
+</svg>
