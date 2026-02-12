@@ -830,6 +830,7 @@ section {
 .podcast-visual {
   position: relative;
   overflow: hidden;
+  background: #000;
 }
 
 .podcast-cover {
