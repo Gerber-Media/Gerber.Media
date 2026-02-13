@@ -8,7 +8,7 @@ Portfolio & Agency website for Gerber.Media — Web, Design, Media, Consulting.
 ## Stack
 
 - Static HTML/CSS/JS
-- Bilingual: German (DE) & English (EN)
+- Trilingual: German (DE), English (EN) & Danish (DA)
 - Hosted on GitHub Pages
 
 ## Local Development
