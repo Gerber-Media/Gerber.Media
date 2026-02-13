@@ -15,18 +15,20 @@
     localStorage.setItem('theme', mode);
   }
 
-  // Init: check saved preference, then system preference
+  // Init: check saved preference, then system preference, default to dark
   var savedTheme = localStorage.getItem('theme');
   if (savedTheme) {
     setTheme(savedTheme);
-  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    setTheme('light');
+  } else {
     setTheme('dark');
   }
 
   if (themeToggle) {
     themeToggle.addEventListener('click', function () {
       var current = document.documentElement.getAttribute('data-theme');
-      setTheme(current === 'dark' ? 'light' : 'dark');
+      setTheme(current === 'light' ? 'dark' : 'light');
     });
   }
 
