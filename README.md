@@ -1,6 +1,6 @@
 # Gerber.Media
 
-Portfolio & Agency website for Gerber.Media — Web, Design, Media, Consulting.
+Portfolio & Agency website for Gerber.Media — Audio, Podcasts, Design, Media, Consulting.
 
 <img width="2255" height="1419" alt="image" src="https://github.com/user-attachments/assets/ab830711-a99c-41d8-a108-5681f7a22b4b" />
 
