@@ -3,41 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gerber.Media &#8212; Creative Agency for Web, Design &amp; Media</title>
-  <meta name="description" content="Gerber.Media &#8212; Creative agency for web development, design, media production and consulting.">
-  <link rel="alternate" hreflang="de" href="../index.html">
-  <link rel="alternate" hreflang="en" href="index.html">
-  <link rel="alternate" hreflang="da" href="../da/index.html">
+  <meta name="color-scheme" content="light dark">
+  <title>Gerber.Media — Creative Agency for Web, Design & Media</title>
+  <meta name="description" content="Gerber.Media — Creative agency for web development, design, media production and consulting. Podcast production, audio design, and digital media.">
+  <meta name="keywords" content="Podcast Production, Audio Design, Web Design, Creative Agency, Denmark">
+  <meta name="author" content="Gerber.Media">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gerber.Media — Creative Agency for Web, Design & Media">
+  <meta property="og:description" content="Podcast production, audio design, and digital media from A to Z. Professional creative agency from Denmark.">
+  <meta property="og:type" content="business.business">
+  <meta property="og:url" content="https://gerber.media/en/">
+  <meta property="og:site_name" content="Gerber.Media">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gerber.Media — Creative Agency for Web, Design & Media">
+  <meta name="twitter:description" content="Podcast production, audio design, and digital media from A to Z.">
+  <link rel="alternate" hreflang="de" href="https://gerber.media/">
+  <link rel="alternate" hreflang="en" href="https://gerber.media/en/">
+  <link rel="alternate" hreflang="da" href="https://gerber.media/da/">
+  <link rel="canonical" href="https://gerber.media/en/">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="stylesheet" href="../css/style.css">
-  <script>
-    // Automatische Spracherkennung basierend auf Browsersprache
-    (function() {
-      // Prüfe ob bereits eine Sprachpräferenz gespeichert ist
-      var savedLang = localStorage.getItem('preferredLanguage');
-      if (savedLang) {
-        return; // Benutzer hat bereits eine Sprache manuell gewählt
-      }
-
-      // Hole die Browsersprache
-      var browserLang = navigator.language || navigator.userLanguage;
-      var langCode = browserLang.split('-')[0]; // "en-US" → "en"
-
-      // Definiere verfügbare Sprachen und Zuordnungen
-      var langMap = {
-        'en': false,     // Englisch - bleibe auf dieser Seite
-        'da': '../da/',   // Dänisch
-        'de': '../'       // Deutsch
-      };
-
-      // Falls Browsersprache eine ähnliche Variante ist (z.B. "en-GB" für Englisch)
-      if (langMap.hasOwnProperty(langCode) && langMap[langCode]) {
-        window.location.href = langMap[langCode] + 'index.html';
-      }
-    })();
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="../css/style.css" as="style">
+  <link rel="preload" href="../js/main.js" as="script">
+  
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Gerber.Media",
+    "description": "Creative agency for podcast production, audio design, web and digital media",
+    "url": "https://gerber.media/en/",
+    "telephone": "+4915566350001",
+    "email": "hello@gerber.media",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nedervej 12",
+      "addressLocality": "Lysabild",
+      "postalCode": "6470",
+      "addressCountry": "DK"
+    }
+  }
   </script>
+  
+  <script defer src="../js/language-detect.js"></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <noscript>
+    <div style="background: #fff3cd; color: #856404; padding: 1rem; margin: 1rem; border: 1px solid #ffc107; border-radius: 4px; font-family: system-ui, sans-serif;">
+      <strong>JavaScript required:</strong> This page works best with JavaScript enabled. Please enable JavaScript in your browser settings.
+    </div>
+  </noscript>
 
   <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -72,6 +95,8 @@
       </button>
     </div>
   </nav>
+  
+  <main id="main-content">
 
   <!-- Hero -->
   <section id="hero" class="hero">
@@ -271,8 +296,8 @@
       </div>
     </div>
   </footer>
-
-  <!-- Modal: Imprint -->
+  </main>
+    <!-- Modal: Imprint -->
   <div class="modal-overlay" id="modal-imprint" role="dialog" aria-modal="true" aria-labelledby="modal-imprint-title">
     <div class="modal">
       <div class="modal-header">

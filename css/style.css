@@ -66,6 +66,19 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   font-family: var(--font);
   background: var(--bg);
@@ -88,6 +101,22 @@ h1, h2, h3, h4, h5, h6 {
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 32px;
+}
+
+/* --- Accessibility: Skip Link --- */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 /* --- Navigation --- */

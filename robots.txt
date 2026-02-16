@@ -1,0 +1,17 @@
+# Gerber.Media robots.txt
+User-agent: *
+Allow: /
+Allow: /en/
+Allow: /da/
+
+# Sitemaps
+Sitemap: https://gerber.media/sitemap.xml
+
+# Crawl-Delay (optional, für aggressive Crawler)
+Crawl-delay: 1
+
+# Disallow sensible paths
+Disallow: /admin/
+Disallow: /.git/
+Disallow: *.mp4
+Disallow: *.mp3
