@@ -382,10 +382,16 @@
         <h3>6. Cookies &amp; lokale Speicherung</h3>
         <p>Diese Website verwendet keine Cookies. Zur Speicherung Ihrer bevorzugten Farbschema-Einstellung (Hell-/Dunkelmodus) wird der localStorage Ihres Browsers genutzt. Dies ist technisch notwendig und enth&#228;lt keine personenbezogenen Daten.</p>
 
-        <h3>7. Externe Inhalte</h3>
-        <p>Diese Website l&#228;dt Bilder von Unsplash (unsplash.com). Beim Abruf dieser Bilder wird Ihre IP-Adresse an die Server von Unsplash Inc. (USA) &#252;bermittelt. Weitere Informationen finden Sie in der <a href="https://unsplash.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerkl&#228;rung von Unsplash</a>. Au&#223;erdem werden Schriftarten von Google Fonts geladen, wobei Ihre IP-Adresse an Google-Server &#252;bertragen wird. Mehr dazu in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerkl&#228;rung von Google</a>.</p>
+        <h3>7. Externe Inhalte und Datenverwarbeitung</h3>
+        <p>Diese Website lädt Bilder von Unsplash (unsplash.com). Beim Abruf dieser Bilder wird Ihre IP-Adresse an die Server von Unsplash Inc. (USA) übermittelt. Weitere Informationen finden Sie in der <a href="https://unsplash.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Unsplash</a>.</p>
 
-        <h3>8. Analyse-Tools und Werbung</h3>
+        <h3>8. Kontaktformular & Formspree</h3>
+        <p>Unser Kontaktformular wird durch Formspree (https://formspree.io) verwaltet. Wenn Sie das Formular einreichen, werden Ihre eingegebenen Daten (Name, E-Mail, Nachricht) an die Server von Formspree Inc. (USA) übertragen. Dies erfolgt auf Basis Ihrer Einwilligung. Formspree speichert diese Daten, um uns zu ermöglichen, Sie zu kontaktieren. Weitere Informationen finden Sie in der <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Formspree</a>.</p>
+
+        <h3>9. Schriftarten</h3>
+        <p>Diese Website verwendet System-Schriftarten statt externer Font-Dateien. Dies gewährleistet maximale Datenschutzkonformität und lädt keine zusätzlichen Ressourcen von externen Servern.</p>
+
+        <h3>10. Analyse-Tools und Werbung</h3>
         <p>Diese Website verwendet keine Analyse-Tools und keine Werbetracker.</p>
       </div>
     </div>
@@ -393,6 +399,18 @@
 
   </main>
   
+  <!-- Privacy Transparency Banner -->
+  <div id="privacy-banner" class="privacy-banner hidden" role="status" aria-label="Datenschutz-Information" aria-live="polite">
+    <div class="privacy-banner__content">
+      <div class="privacy-banner__text">
+        <strong>Datenschutz & Transparenz:</strong> Diese Website nutzt System-Fonts für Datenschutz, lädt externe Bilder von Unsplash und das Kontaktformular wird zu Formspree übertragen. Weitere Details finden Sie in unserer <a href="#" data-modal="modal-datenschutz">Datenschutzerklärung</a>.
+      </div>
+      <button class="privacy-banner__close" aria-label="Information schließen">Verstanden</button>
+    </div>
+  </div>
+
+  <script defer src="js/language-detect.js"></script>
+  <script defer src="js/privacy-banner.js"></script>
   <script defer src="js/main.js"></script>
 </body>
 </html>

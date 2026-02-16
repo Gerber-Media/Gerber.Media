@@ -1,17 +1,31 @@
 # Gerber.Media robots.txt
+# Privacy-first website with no tracking or advertising
+
 User-agent: *
 Allow: /
 Allow: /en/
 Allow: /da/
 
+# Crawl-Delay for responsible crawling
+Crawl-delay: 1
+
+# Disallow sensitive paths
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /.gitignore
+Disallow: *.mp4
+Disallow: *.mp3
+
 # Sitemaps
 Sitemap: https://gerber.media/sitemap.xml
 
-# Crawl-Delay (optional, für aggressive Crawler)
-Crawl-delay: 1
+# Media Files - Allow crawling for SEO
+Allow: /img/
+Allow: /css/
+Allow: /js/
 
-# Disallow sensible paths
-Disallow: /admin/
-Disallow: /.git/
-Disallow: *.mp4
-Disallow: *.mp3
+# Privacy Policy & Legal
+Allow: /index.html#modal-datenschutz
+Allow: /en/index.html#modal-datenschutz
+Allow: /da/index.html#modal-kolofon
+

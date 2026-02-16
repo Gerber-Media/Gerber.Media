@@ -368,15 +368,33 @@
         <h3>6. Cookies &amp; lokal lagring</h3>
         <p>Denne hjemmeside bruger ingen cookies. Til lagring af din foretrukne farveskemaindstilling (lys/m&#248;rk tilstand) anvendes din browsers localStorage. Dette er teknisk n&#248;dvendigt og indeholder ingen personoplysninger.</p>
 
-        <h3>7. Eksternt indhold</h3>
-        <p>Denne hjemmeside indl&#230;ser billeder fra Unsplash (unsplash.com). Ved hentning af disse billeder overf&#248;res din IP-adresse til Unsplash Inc.&#8217;s servere (USA). Yderligere oplysninger finder du i <a href="https://unsplash.com/privacy" target="_blank" rel="noopener noreferrer">Unsplash&#8217;s privatlivspolitik</a>. Derudover indl&#230;ses skrifttyper fra Google Fonts, hvorved din IP-adresse overf&#248;res til Googles servere. Se <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Googles privatlivspolitik</a> for detaljer.</p>
+        <h3>7. Eksternt indhold og databehandling</h3>
+        <p>Denne hjemmeside indl&#230;ser billeder fra Unsplash (unsplash.com). Ved hentning af disse billeder overf&#248;res din IP-adresse til Unsplash Inc.&#8217;s servere (USA). Yderligere oplysninger finder du i <a href="https://unsplash.com/privacy" target="_blank" rel="noopener noreferrer">Unsplash&#8217;s privatlivspolitik</a>.</p>
 
-        <h3>8. Analysev&#230;rkt&#248;jer og reklame</h3>
+        <h3>8. Kontaktformular & Formspree</h3>
+        <p>Vores kontaktformular administreres af Formspree (https://formspree.io). N&#229;r du indsender formularen, bliver dine data (navn, e-mail, besked) overf&#248;rt til Formspree Inc.&#8217;s servere (USA). Dette sker baseret p&#229; dit samtykke. Formspree gemmer disse data for at give os mulighed for at kontakte dig. Se deres <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">privatlivspolitik</a> for flere detaljer.</p>
+
+        <h3>9. Skrifttyper</h3>
+        <p>Denne hjemmeside bruger systemskrifttyper i stedet for eksterne fontfiler. Dette sikrer maksimal privatlivsbeskyttelse og indl&#230;ser ikke yderligere ressourcer fra eksterne servere.</p>
+
+        <h3>10. Analysev&#230;rkt&#248;jer og reklame</h3>
         <p>Denne hjemmeside bruger ingen analysev&#230;rkt&#248;jer eller reklametrackere.</p>
       </div>
     </div>
   </div>
 
-  <script src="../js/main.js"></script>
+  <!-- Privacy Transparency Banner -->
+  <div id="privacy-banner" class="privacy-banner hidden" role="status" aria-label="Privatlivsinformation" aria-live="polite">
+    <div class="privacy-banner__content">
+      <div class="privacy-banner__text">
+        <strong>Privatliv & Transparens:</strong> Denne hjemmeside bruger systemskrifttyper for privatlivsbeskyttelse, indlæser eksterne billeder fra Unsplash, og kontaktformularer sendes til Formspree. Se vores <a href="#" data-modal="modal-kolofon">privatlivspolitik</a> for detaljer.
+      </div>
+      <button class="privacy-banner__close" aria-label="Luk information">Forstået</button>
+    </div>
+  </div>
+
+  <script defer src="../js/language-detect.js"></script>
+  <script defer src="../js/privacy-banner.js"></script>
+  <script defer src="../js/main.js"></script>
 </body>
 </html>

@@ -366,15 +366,33 @@
         <h3>6. Cookies &amp; Local Storage</h3>
         <p>This website does not use cookies. To save your preferred colour scheme setting (light/dark mode), your browser&#8217;s localStorage is used. This is technically necessary and does not contain any personal data.</p>
 
-        <h3>7. External Content</h3>
-        <p>This website loads images from Unsplash (unsplash.com). When these images are fetched, your IP address is transmitted to the servers of Unsplash Inc. (USA). For more information, see the <a href="https://unsplash.com/privacy" target="_blank" rel="noopener noreferrer">Unsplash Privacy Policy</a>. Additionally, fonts are loaded from Google Fonts, which transmits your IP address to Google servers. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> for details.</p>
+        <h3>7. External Content and Data Processing</h3>
+        <p>This website loads images from Unsplash (unsplash.com). When these images are fetched, your IP address is transmitted to the servers of Unsplash Inc. (USA). For more information, see the <a href="https://unsplash.com/privacy" target="_blank" rel="noopener noreferrer">Unsplash Privacy Policy</a>.</p>
 
-        <h3>8. Analytics and Advertising</h3>
+        <h3>8. Contact Form & Formspree</h3>
+        <p>Our contact form is managed by Formspree (https://formspree.io). When you submit the form, your entered data (name, email, message) is transmitted to Formspree Inc.'s servers (USA). This occurs based on your consent. Formspree stores this data to enable us to contact you. For more information, see their <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</p>
+
+        <h3>9. Fonts</h3>
+        <p>This website uses system fonts instead of external font files. This ensures maximum privacy compliance and does not load additional resources from external servers.</p>
+
+        <h3>10. Analytics and Advertising</h3>
         <p>This website does not use any analytics tools or advertising trackers.</p>
       </div>
     </div>
   </div>
 
-  <script src="../js/main.js"></script>
+  <!-- Privacy Transparency Banner -->
+  <div id="privacy-banner" class="privacy-banner hidden" role="status" aria-label="Privacy Information" aria-live="polite">
+    <div class="privacy-banner__content">
+      <div class="privacy-banner__text">
+        <strong>Privacy & Transparency:</strong> This website uses system fonts for privacy, loads external images from Unsplash, and contact forms are submitted to Formspree. See our <a href="#" data-modal="modal-datenschutz">Privacy Policy</a> for details.
+      </div>
+      <button class="privacy-banner__close" aria-label="Close information">Got it</button>
+    </div>
+  </div>
+
+  <script defer src="../js/language-detect.js"></script>
+  <script defer src="../js/privacy-banner.js"></script>
+  <script defer src="../js/main.js"></script>
 </body>
 </html>
