@@ -1,4 +1,4 @@
-name: Lighthouse CI
+name: CI - Lighthouse & Linting
 
 on:
   workflow_dispatch:
@@ -9,6 +9,18 @@ env:
   SITE_URL: https://gerber.media
 
 jobs:
+  lint:
+    name: Lint HTML & CSS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate HTML
+        uses: w3c/html-validator@master
+        with:
+          path: "*.html,en/*.html,da/*.html"
+
   lighthouse:
     name: Run Lighthouse
     runs-on: ubuntu-latest
