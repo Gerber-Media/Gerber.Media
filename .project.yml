@@ -1,0 +1,87 @@
+project_name: Gerber.Media
+repo: https://github.com/Gerber-Media/Gerber.Media
+created: 2026-02-16
+owner: Dirk Gerber
+
+summary: |
+  Gerber.Media ist eine kleine statische Website / Kreativagentur-Präsenz
+  (Mehrsprachig: de / en / da) mit Fokus auf Podcast-Produktion, Audio,
+  Web & Media. Die Seite ist statisch, performance- und datenschutzorientiert.
+
+purpose: |
+  Präsentation von Leistungen, Kontaktakquise über ein einfaches Formular
+  (Formspree), Portfolio-Showcase und Kontaktinformationen. Ziel ist
+  maximale Datenschutzkonformität (Privacy-first) bei guter Auffindbarkeit
+  (SEO, hreflang, sitemap).
+
+environment:
+  local_os: macOS
+  dev_tools: "zsh, Python 3 (builtin http.server), git"
+  languages: [HTML, CSS, JavaScript]
+  server: "python3 -m http.server 8000"
+
+structure: |
+  / (root)
+  - index.html                # Deutsch (Hauptseite)
+  - en/index.html             # Englisch
+  - da/index.html             # Dänisch
+  - css/style.css             # Styles (dark default)
+  - js/main.js                # Hauptskripte (theme, interactions)
+  - js/language-detect.js     # Browser language redirect
+  - js/privacy-banner.js      # Privacy transparency banner
+  - robots.txt
+  - sitemap.xml
+  - .project.yml              # Diese Datei
+
+important_files:
+  - "index.html: canonical, hreflang, OG, schema.org, google-site-verification"
+  - "css/style.css: system font stack, prefers-reduced-motion, skip-link styles"
+  - "js/main.js: theme (dark default), language dropdown, localStorage prefs"
+  - "js/language-detect.js: deferred, respects preferredLanguage"
+  - "js/privacy-banner.js: accessibility + dismissal via localStorage"
+
+how_to_run:
+  - "cd /path/to/Gerber.Media"
+  - "python3 -m http.server 8000"
+  - "open http://localhost:8000 in browser"
+
+git:
+  branch: main
+  recent_commits:
+    - "feat: Add automatic language detection and set dark mode as default"
+    - "feat: Comprehensive accessibility and SEO improvements - WCAG 2.1 compliance"
+    - "feat: Privacy-first improvements with transparency banner"
+    - "feat: Add Google Site Verification meta tag"
+
+seo_and_privacy_notes: |
+  - sitemap.xml present and referenced in robots.txt
+  - canonical + hreflang configured for each language
+  - Open Graph + Twitter Card tags included
+  - Schema.org JSON-LD for LocalBusiness implemented
+  - No analytics/trackers present (privacy-first)
+  - Fonts self-hosted / system-font stack to avoid external calls
+  - Unsplash images and Formspree noted in privacy policy
+  - Google site verification meta tag added for Search Console
+
+accessibility_highlights:
+  - skip-to-content link present
+  - prefers-reduced-motion support
+  - noscript fallback messages
+  - banner uses role=status and aria-live=polite
+  - keyboard support for all interactive elements
+
+verification_and_next_steps: |
+  1) Add site to Google Search Console and verify (using the meta tag already
+     embedded on all pages).
+  2) Submit sitemap.xml in Search Console for faster indexing.
+  3) Optionally add server-side redirects if deploying to different host.
+  4) Monitor Search Console for crawl errors and mobile usability reports.
+
+notes_for_future_switching: |
+  - This file is designed for quick context when switching projects. Open
+    .project.yml to get environment, run commands and key implementation
+    details. Keep updated after major changes.
+
+contact:
+  email: hello@gerber.media
+  owner: Dirk Gerber
