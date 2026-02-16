@@ -10,6 +10,32 @@
   <link rel="alternate" hreflang="da" href="index.html">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="stylesheet" href="../css/style.css">
+  <script>
+    // Automatische Spracherkennung basierend auf Browsersprache
+    (function() {
+      // Prüfe ob bereits eine Sprachpräferenz gespeichert ist
+      var savedLang = localStorage.getItem('preferredLanguage');
+      if (savedLang) {
+        return; // Benutzer hat bereits eine Sprache manuell gewählt
+      }
+
+      // Hole die Browsersprache
+      var browserLang = navigator.language || navigator.userLanguage;
+      var langCode = browserLang.split('-')[0]; // "en-US" → "en"
+
+      // Definiere verfügbare Sprachen und Zuordnungen
+      var langMap = {
+        'en': '../en/',   // Englisch
+        'da': false,      // Dänisch - bleibe auf dieser Seite
+        'de': '../'       // Deutsch
+      };
+
+      // Falls Browsersprache eine ähnliche Variante ist (z.B. "en-GB" für Englisch)
+      if (langMap.hasOwnProperty(langCode) && langMap[langCode]) {
+        window.location.href = langMap[langCode] + 'index.html';
+      }
+    })();
+  </script>
 </head>
 <body>
 

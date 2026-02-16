@@ -15,12 +15,10 @@
     localStorage.setItem('theme', mode);
   }
 
-  // Init: check saved preference, then system preference, default to dark
+  // Init: check saved preference, default to dark
   var savedTheme = localStorage.getItem('theme');
   if (savedTheme) {
     setTheme(savedTheme);
-  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    setTheme('light');
   } else {
     setTheme('dark');
   }
@@ -202,6 +200,17 @@
         langButton.setAttribute('aria-expanded', 'false');
         langButton.focus();
       }
+    });
+
+    // Speichere Sprachauswahl wenn Benutzer auf einen Sprach-Link klickt
+    var langLinks = document.querySelectorAll('.lang-menu a');
+    langLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        var hreflang = this.getAttribute('hreflang');
+        if (hreflang) {
+          localStorage.setItem('preferredLanguage', hreflang);
+        }
+      });
     });
   }
 
