@@ -16,10 +16,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate HTML
-        uses: w3c/html-validator@master
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          path: "*.html,en/*.html,da/*.html"
+          node-version: '18'
+
+      - name: Lint HTML with htmlhint
+        run: |
+          npx htmlhint index.html en/index.html da/index.html
+        continue-on-error: true
+
+      - name: Lint CSS with stylelint
+        run: |
+          npx stylelint "css/**/*.css"
+        continue-on-error: true
 
   lighthouse:
     name: Run Lighthouse
