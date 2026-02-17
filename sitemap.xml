@@ -9,6 +9,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://gerber.media/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://gerber.media/en/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://gerber.media/da/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gerber.media/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gerber.media/es/"/>
   </url>
   <url>
     <loc>https://gerber.media/en/</loc>
@@ -18,6 +20,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://gerber.media/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://gerber.media/en/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://gerber.media/da/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gerber.media/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gerber.media/es/"/>
   </url>
   <url>
     <loc>https://gerber.media/da/</loc>
@@ -27,5 +31,29 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://gerber.media/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://gerber.media/en/"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://gerber.media/da/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gerber.media/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gerber.media/es/"/>
+  </url>
+  <url>
+    <loc>https://gerber.media/fr/</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://gerber.media/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gerber.media/en/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://gerber.media/da/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gerber.media/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gerber.media/es/"/>
+  </url>
+  <url>
+    <loc>https://gerber.media/es/</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://gerber.media/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gerber.media/en/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://gerber.media/da/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gerber.media/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gerber.media/es/"/>
   </url>
 </urlset>
