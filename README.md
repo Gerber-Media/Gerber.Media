@@ -1,20 +1,16 @@
-# Gerber.Media
+# 🚚 Moved to Codeberg
 
-Portfolio & Agency website for Gerber.Media — Audio, Podcasts, Design, Media, Consulting.
+All repositories have moved to:
+**[codeberg.org/GERBER-MEDIA](https://codeberg.org/GERBER-MEDIA)**
 
-<img width="2255" height="1419" alt="image" src="https://github.com/user-attachments/assets/ab830711-a99c-41d8-a108-5681f7a22b4b" />
+With political unpredictability becoming the norm in the US,
+I've chosen to trust European infrastructure for my work.
 
+Codeberg e.V. is a non-profit based in Germany —
+open source, community-driven, no VC money, no US jurisdiction.
 
-## Stack
+**This repository is no longer maintained here.**
 
-- Static HTML/CSS/JS
-- Trilingual: German (DE), English (EN) & Danish (DA)
-- Hosted on GitHub Pages
+---
 
-## Local Development
-
-Open `index.html` in a browser. No build step required.
-
-## Deployment
-
-Push to `main` branch. GitHub Pages serves from root. Custom domain configured via `CNAME`.
+*Previously: Portfolio & Agency website for Gerber.Media — Audio, Podcasts, Design, Media, Consulting.*
